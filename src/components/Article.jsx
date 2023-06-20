@@ -1,18 +1,10 @@
-function Article() {
-  const name = "mohdxnizamv";
-  const family = ["Mohd Nizamuddin", "NurHidayat", "Muhammad Nur Naim"];
-
+function Article(props) {
   return (
     <>
-      <div>{name}</div>
+      <div>{props.name}</div>
       <div>
-        {family.map((keluarga) => {
-          return (
-            <>
-              <div>{keluarga}</div>
-              <div>{keluarga}</div>
-            </>
-          );
+        {props.family.map((keluarga) => {
+          return <div>{keluarga}</div>;
         })}
       </div>
     </>
