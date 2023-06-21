@@ -1,5 +1,14 @@
+/* Alata Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+
+/* Golos Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -24,6 +33,7 @@ a:hover {
 }
 
 body {
+  font-family: "Alata", sans-serif;
   margin: 0;
   display: flex;
   place-items: center;
@@ -32,8 +42,11 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  margin-bottom: 0;
+}
+
+h2 {
+  margin-bottom: 0;
 }
 
 h3 {

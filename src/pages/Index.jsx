@@ -15,7 +15,7 @@ function Homepage() {
 
   return (
     <>
-      <h1>Customer By Json File</h1>
+      <h1 className="font-bold text-sky-600 text-2xl">Customer By Json File</h1>
 
       <Search onSearchChange={onSearchChange} />
 
