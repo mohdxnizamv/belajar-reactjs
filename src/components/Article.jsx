@@ -1,12 +1,19 @@
 function Article(props) {
   return (
     <>
-      <div>{props.name}</div>
+      <div>{props.title}</div>
       <div>
-        {props.family.map((title) => {
+        nama pertama : {props.firstName}, nama terakhir: {props.lastName},
+      </div>
+      <div>
+        umur: {props.age}, number: {props.number}
+      </div>
+      <div>gender: {props.gender}</div>
+      {/* <div>
+        {props.titles.map((title) => {
           return <div>{title}</div>;
         })}
-      </div>
+      </div> */}
     </>
   );
 }
