@@ -3,8 +3,8 @@ function Article(props) {
     <>
       <div>{props.name}</div>
       <div>
-        {props.family.map((keluarga) => {
-          return <div>{keluarga}</div>;
+        {props.family.map((title) => {
+          return <div>{title}</div>;
         })}
       </div>
     </>
