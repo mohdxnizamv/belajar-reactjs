@@ -1,4 +1,13 @@
-/* Alata Fonts */
+/* Nunito */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+
+/* Open Sans */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+/* Josefin Sans */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+/* Alata Sans */
 @import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
 
 /* Golos Fonts */
@@ -8,79 +17,34 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  font-family: "Alata", sans-serif;
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  margin-bottom: 0;
-}
-
-h2 {
-  margin-bottom: 0;
-}
-
-h3 {
-  margin-bottom: 0;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@layer base {
+  html {
+    scroll-behavior: smooth;
   }
-  a:hover {
-    color: #747bff;
+  body {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    @apply text-black text-base;
   }
-  button {
-    background-color: #f9f9f9;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Golos Text", sans-serif;
+    @apply text-black text-lg;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply w-full flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200;
+  }
+  .btn2 {
+    @apply relative -top-1 -left-1 bg-gray-800 py-2.5 px-5 font-bold capitalize text-white transition-all before:absolute before:top-1 before:left-1 before:-z-[1] before:h-full before:w-full before:border-2 before:border-gray-700 before:transition-all before:content-[''] hover:top-0 hover:left-0 before:hover:top-0 before:hover:left-0;
+  }
+  .btn3 {
+    @apply w-64 relative rounded-3xl bg-gradient-to-l from-purple-700 to-blue-700 px-7 py-4 text-center font-semibold capitalize text-white hover:bg-gradient-to-r sm:text-sm md:text-sm xl:text-base;
   }
 }

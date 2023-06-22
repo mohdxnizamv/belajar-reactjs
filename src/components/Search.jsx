@@ -10,16 +10,17 @@ function Search(props) {
 
   return (
     <>
-      <div>
-        Cari Artikal :{" "}
+      <h1>
+        Cari Artikal : <br />
         <input
           onChange={onSearchChange}
-          className="w-full rounded-md border border-gray-300 p-3 placeholder:font-sans placeholder:font-light focus:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600"
+          className="w-64 rounded-md border text-green-700 border-gray-300 p-3 placeholder:font-mono placeholder:font-light focus:border-transparent focus:outline-none focus:ring-2 focus:ring-gray-600"
         ></input>
-      </div>
+      </h1>
 
-      <div className="font-extrabold">
-        Ditemukan data dengan hasil pencarian kata {search}
+      <div>
+        Ditemukan {props.totalPosts} data dengan hasil pencarian kata
+        <span className="text-green-700 font-mono"> {search}</span>
       </div>
     </>
   );
